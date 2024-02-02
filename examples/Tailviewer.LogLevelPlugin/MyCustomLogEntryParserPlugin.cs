@@ -10,7 +10,7 @@ namespace Tailviewer.LogLevelPlugin
 		public ILogEntryParser CreateParser(IServiceContainer services, ILogFileFormat format)
 		{
 			// We want to make sure that we only influence those log files we actually
-			// know the structure of. Therefore we check that the format of the log file
+			// know the structure of. Therefore, we check that the format of the log file
 			// we're supposed to parse now IS the format our matcher has detected.
 			if (format == MyLogFileFormatMatcherPlugin.MyCustomFormat)
 				return new MyCustomLogLevelParser();
